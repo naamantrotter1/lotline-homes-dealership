@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LotLine Homes – Manufactured Homes Dealership</title>
+  <link rel="stylesheet" href="styles.css?v=4" />
+</head>
+<body>
+
+
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="LotLine Homes" class="logo-img" />
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <div class="nav-dropdown">
+          <button>Homes ▾</button>
+          <div class="nav-dropdown-menu">
+            <a href="#homes">All Homes</a>
+            <a href="#homes">Single-Wide</a>
+            <a href="#homes">Double-Wide</a>
+            <a href="#homes">Triple-Wide</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button>Resources ▾</button>
+          <div class="nav-dropdown-menu">
+            <a href="#financing">Financing</a>
+            <a href="#faq">FAQ</a>
+            <a href="#why-us">Why Us</a>
+          </div>
+        </div>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:+15551234567" class="nav-phone">📞 (555) 123-4567</a>
+        <a href="#contact" class="btn btn-red">Get a Quote</a>
+      </div>
+      <button class="hamburger" id="hamburger">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-img"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-slogan">Bringing Homeownership<br />Back Within Reach.</h1>
+        <p class="hero-sub">Affordable single-wide, double-wide, and triple-wide homes.</p>
+
+        <form class="zip-form" id="zipForm">
+          <div class="zip-form-inner">
+            <span class="zip-form-icon">📍</span>
+            <input type="text" placeholder="Enter your ZIP code" maxlength="5" id="zipInput" />
+          </div>
+          <button type="submit">Find Homes →</button>
+        </form>
+
+        <div class="hero-trust">
+          <div class="trust-badge"><strong>BBB A+</strong> Accredited</div>
+          <div class="trust-badge">⭐ <strong>4.9/5</strong> Rating</div>
+          <div class="trust-badge">🏠 <strong>200+</strong> Homes Sold</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME TYPE TILES -->
+
+
+  <!-- HOMES INVENTORY -->
+  <section class="section bg-gray" id="homes">
+    <div class="container">
+      <div class="section-header">
+        <h2>Available Homes</h2>
+
+      </div>
+      <div class="filters-bar">
+        <select class="filter-select" id="filterType">
+          <option value="">All Home Types</option>
+          <option value="single">Single-Wide (14–18 ft wide)</option>
+          <option value="double">Double-Wide (20–32 ft wide)</option>
+          <option value="triple">Triple-Wide (45+ ft wide)</option>
+        </select>
+        <select class="filter-select" id="filterBeds">
+          <option value="">Any Bedrooms</option>
+          <option value="2">2 Bedrooms</option>
+          <option value="3">3 Bedrooms</option>
+          <option value="4">4+ Bedrooms</option>
+        </select>
+        <select class="filter-select" id="filterPrice">
+          <option value="">Any Price</option>
+          <option value="80000">Up to $80,000</option>
+          <option value="120000">Up to $120,000</option>
+          <option value="180000">Up to $180,000</option>
+          <option value="250000">Up to $250,000</option>
+        </select>
+        <select class="filter-select" id="filterBrand">
+          <option value="">Any Manufacturer</option>
+          <option value="Clayton Homes">Clayton Homes</option>
+          <option value="Cavco Homes">Cavco Homes</option>
+        </select>
+        <select class="filter-select" id="filterSort">
+          <option value="default">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="sqft">Largest First</option>
+        </select>
+        <span class="results-count" id="resultsCount"></span>
+      </div>
+      <div class="homes-grid" id="homesGrid"></div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="container trust-strip-inner">
+      <div class="trust-item">
+        <div class="t-icon">🏠</div>
+        <strong>200+</strong>
+        <span>Homes Sold</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="t-icon">⭐</div>
+        <strong>4.9 / 5</strong>
+        <span>Customer Rating</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="t-icon">📅</div>
+        <strong>15 Years</strong>
+        <span>In Business</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="t-icon">🏅</div>
+        <strong>BBB A+</strong>
+        <span>Accredited Dealer</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="t-icon">🔧</div>
+        <strong>Full Service</strong>
+        <span>Delivery &amp; Setup</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY US -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="section-header center">
+        <p class="eyebrow">Why LotLine Homes</p>
+        <h2>The Smarter Way to Buy a Home</h2>
+        <p>We handle everything from selection to move-in, making your experience simple and stress-free.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Affordable Pricing</h3>
+          <p>Get more home for your money. Our homes start at a fraction of the cost of site-built homes.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🏗️</div>
+          <h3>Quality Construction</h3>
+          <p>Every home is HUD-certified and built to exceed federal safety and energy standards.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">⚡</div>
+          <h3>Fast Delivery</h3>
+          <p>From selection to move-in in as little as 60 days. We handle permits, delivery, and setup.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">📋</div>
+          <h3>Easy Financing</h3>
+          <p>We work with multiple lenders to get you approved — even with less-than-perfect credit.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🔧</div>
+          <h3>White-Glove Setup</h3>
+          <p>Our crew handles transport, foundation, utility connections, and final inspection.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <h3>Warranty Protection</h3>
+          <p>All new homes come with manufacturer warranty plus our dealer service guarantee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCING -->
+  <section class="section bg-gray" id="financing">
+    <div class="container financing-layout">
+      <div class="financing-text">
+        <p class="eyebrow">Financing Options</p>
+        <h2>Flexible Financing For Every Budget</h2>
+        <p>We partner with leading lenders to offer competitive rates and flexible terms for all credit situations.</p>
+        <ul class="financing-list">
+          <li>Chattel loans (home only)</li>
+          <li>Land-home packages</li>
+          <li>FHA Title I &amp; Title II loans</li>
+          <li>VA &amp; USDA programs available</li>
+          <li>In-house financing for qualifying buyers</li>
+          <li>Bad credit programs available</li>
+        </ul>
+        <a href="#contact" class="btn btn-red btn-lg">Apply for Financing</a>
+      </div>
+      <div class="calc-box">
+        <h3>Monthly Payment Estimator</h3>
+        <div class="calc-row">
+          <label>Home Price</label>
+          <input type="number" id="calcPrice" placeholder="e.g. 120000" />
+        </div>
+        <div class="calc-row">
+          <label>Down Payment ($)</label>
+          <input type="number" id="calcDown" placeholder="e.g. 10000" />
+        </div>
+        <div class="calc-row">
+          <label>Loan Term</label>
+          <select id="calcTerm">
+            <option value="10">10 years</option>
+            <option value="15">15 years</option>
+            <option value="20" selected>20 years</option>
+            <option value="25">25 years</option>
+            <option value="30">30 years</option>
+          </select>
+        </div>
+        <div class="calc-row">
+          <label>Interest Rate (%)</label>
+          <input type="number" id="calcRate" placeholder="e.g. 6.5" step="0.1" />
+        </div>
+        <button class="btn btn-red btn-full" onclick="calcPayment()">Calculate Payment</button>
+        <div class="calc-result" id="calcResult">
+          <div class="calc-result-label">Estimated Monthly Payment</div>
+          <div class="calc-result-amount" id="calcAmount"></div>
+        </div>
+        <p class="calc-disclaimer">*Estimate only. Contact us for actual rates and terms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header center">
+        <p class="eyebrow">Customer Reviews</p>
+        <h2>What Our Buyers Are Saying</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="test-stars">★★★★★</div>
+          <blockquote>"LotLine made the whole process so easy. We picked out our home, and 8 weeks later we were moving in. The whole team was incredible from start to finish!"</blockquote>
+          <div class="reviewer-name">Sarah M.</div>
+          <div class="reviewer-detail">Bought a 3-bed double-wide • Houston, TX</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="test-stars">★★★★★</div>
+          <blockquote>"We had a rough patch credit-wise but the financing team worked miracles. They got us into our dream home with a monthly payment we could actually afford."</blockquote>
+          <div class="reviewer-name">James &amp; Tina R.</div>
+          <div class="reviewer-detail">First-time buyers • San Antonio, TX</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="test-stars">★★★★★</div>
+          <blockquote>"I've bought two homes through LotLine now. The quality, price, and service keep bringing me back. I'd recommend them to anyone looking for a great deal."</blockquote>
+          <div class="reviewer-name">David K.</div>
+          <div class="reviewer-detail">Repeat customer • Austin, TX</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section bg-gray" id="faq">
+    <div class="container">
+      <div class="section-header center">
+        <p class="eyebrow">FAQ</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is the difference between a manufactured home and a mobile home?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Manufactured homes are built after June 15, 1976 and comply with the HUD Code — a federal building standard for safety and construction. "Mobile home" is an older term for homes built before 1976. Modern manufactured homes are built to much higher standards and can look just like site-built homes.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do I need to own land to buy a manufactured home?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>No! You can place your home in a manufactured home community (also called a mobile home park) and rent the land. Or you can purchase land separately. We can help connect you with land resources in your area and offer land-home financing packages.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does delivery and setup take?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>From the time you choose your home, the entire process typically takes 60–90 days, including permits, site preparation, delivery, and setup. The timeline can vary based on your location and permit requirements, but we'll keep you informed every step of the way.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Can I get financing if I have bad credit?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We work with a network of lenders who specialize in manufactured home financing, including programs designed for buyers with less-than-perfect credit. We'll work hard to find a solution that fits your situation. Contact us to discuss your options.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What warranty comes with a new manufactured home?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>New homes come with the manufacturer's warranty, which typically covers the structure for 1 year and the HUD compliance for the life of the home. Appliances come with their own manufacturer warranties. We also offer extended service plans for additional peace of mind.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact-layout">
+      <div class="contact-info">
+        <p class="eyebrow">Contact Us</p>
+        <h2>Ready to Find Your Perfect Home?</h2>
+        <p>Our home specialists are here to help you find the right home, financing, and lot. No pressure, ever.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <span class="ci-icon">📍</span>
+            <div>
+              <div class="ci-label">Office</div>
+              <div class="ci-val">2020 New Garden Rd Ste E, Greensboro, NC 27410</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">📞</span>
+            <div>
+              <div class="ci-label">Phone</div>
+              <div class="ci-val"><a href="tel:+15551234567">(555) 123-4567</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">✉️</span>
+            <div>
+              <div class="ci-label">Email</div>
+              <div class="ci-val"><a href="mailto:sales@lotlinehomes.com">sales@lotlinehomes.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="ci-icon">🕐</span>
+            <div>
+              <div class="ci-label">Hours</div>
+              <div class="ci-val">Mon–Sat: 9am–6pm &nbsp;|&nbsp; Sun: Closed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-box">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(555) 000-0000" />
+          </div>
+          <div class="form-group">
+            <label>I'm interested in…</label>
+            <select>
+              <option>Buying a home</option>
+              <option>Financing options</option>
+              <option>Scheduling a tour</option>
+              <option>Trade-in / sell my home</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="4" placeholder="Tell us what you're looking for…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-red btn-full btn-lg">Send Message</button>
+          <div class="form-success" id="formSuccess">✅ Thanks! We'll be in touch within 1 business day.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="logo.png" alt="LotLine Homes" class="footer-logo-img" /></div>
+          <p>Your trusted manufactured home dealer. Quality homes at honest prices since 2009.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn">📘</a>
+            <a href="#" class="social-btn">📸</a>
+            <a href="#" class="social-btn">▶️</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Homes</h4>
+          <a href="#">All Inventory</a>
+          <a href="#">Single-Wide</a>
+          <a href="#">Double-Wide</a>
+          <a href="#">Triple-Wide</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="#">Buyer's Guide</a>
+          <a href="#">Financing FAQ</a>
+          <a href="#">Land Finder</a>
+          <a href="#">Community Map</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+          <a href="#">Reviews</a>
+          <a href="#">Dealer License</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>&copy; 2026 LotLine Homes Dealership. All rights reserved. HUD Dealer #TX-2024-0042</span>
+        <div style="display:flex;gap:16px">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js?v=3"></script>
+</body>
+</html>

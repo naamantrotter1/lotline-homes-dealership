@@ -232,8 +232,8 @@ img { max-width: 100%; display: block; }
 .card-save {
   position: absolute; top: 12px; right: 12px;
   background: rgba(255,255,255,0.9); border: none; border-radius: 50%;
-  width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;
-  cursor: pointer; font-size: 16px; transition: all 0.15s;
+  width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 22px; font-weight: 900; transition: all 0.15s;
 }
 .card-save { color: #ccc; }
 .card-save:hover { background: var(--bg); transform: scale(1.1); color: #aaa; }

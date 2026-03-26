@@ -252,11 +252,31 @@ function toggleFaq(btn) {
 }
 
 // ===== CONTACT FORM =====
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  document.getElementById('formSuccess').classList.add('visible');
-  this.reset();
-  setTimeout(() => document.getElementById('formSuccess').classList.remove('visible'), 5000);
+  const form = this;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('formSuccess').classList.add('visible');
+      form.reset();
+      setTimeout(() => document.getElementById('formSuccess').classList.remove('visible'), 5000);
+    } else {
+      alert('Something went wrong. Please try again or call us directly.');
+    }
+  } catch {
+    alert('Could not send message. Please check your connection and try again.');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+  }
 });
 
 // ===== HAMBURGER =====

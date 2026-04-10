@@ -3,6 +3,31 @@ let activeType = "";
 let activeBrand = "";
 let savedHomes = new Set(JSON.parse(localStorage.getItem('savedHomes') || '[]'));
 
+// ===== DARK MODE =====
+let darkMode = localStorage.getItem('darkMode') === 'true';
+
+function applyDarkMode() {
+  if (darkMode) {
+    document.documentElement.classList.add('dark');
+    document.getElementById('darkModeToggle').textContent = '☀️';
+    document.getElementById('darkModeToggle').setAttribute('aria-label', 'Switch to light mode');
+  } else {
+    document.documentElement.classList.remove('dark');
+    document.getElementById('darkModeToggle').textContent = '🌙';
+    document.getElementById('darkModeToggle').setAttribute('aria-label', 'Switch to dark mode');
+  }
+}
+
+function toggleDarkMode() {
+  darkMode = !darkMode;
+  localStorage.setItem('darkMode', darkMode);
+  applyDarkMode();
+}
+
+// Apply on page load and wire up button
+applyDarkMode();
+document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+
 function toggleSave(id, btn) {
   event.stopPropagation();
   if (savedHomes.has(id)) {
